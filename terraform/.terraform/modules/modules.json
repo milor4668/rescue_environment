@@ -1,0 +1,1 @@
+{"Modules":[{"Key":"","Source":"","Dir":"."},{"Key":"spVault","Source":"./modules/spVault","Dir":"modules/spVault"},{"Key":"spVault.spDocker","Source":"../spDocker","Dir":"modules/spDocker"},{"Key":"vault","Source":"./modules/vault","Dir":"modules/vault"},{"Key":"vault.docker","Source":"../docker","Dir":"modules/docker"}]}
