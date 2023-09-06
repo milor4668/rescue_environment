@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  nexus:
+    image: "sonatype/nexus3:3.59.0"
+    container_name: nexus
+    volumes:
+      - nexus-data:/nexus-data
+    ports:
+      - 8081:8081
+    networks:
+      deployement:
+          ipv4_address: 10.1.0.10
+
+  maj_nexus:
+    build: maj_nexus
+    container_name: maj_nexus
+    volumes:
+      - nexus-data:/nexus-data
+    depends_on:
+      - nexus
+    command: /bin/sh -c "/maj_debian12.sh"
+    networks:
+      deployement:
+          ipv4_address: 10.1.0.11
+
+volumes:
+  nexus-data:
+
+networks:
+  deployement:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 10.1.0.0/16
