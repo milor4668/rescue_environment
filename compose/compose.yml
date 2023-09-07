@@ -17,15 +17,27 @@ services:
     container_name: maj_nexus
     volumes:
       - nexus-data:/nexus-data
+      - mirror-data:/var/spool/apt-mirror
     depends_on:
       - nexus
-    command: /bin/sh -c "/maj_debian12.sh"
+    command: /bin/sh -c "/maj_nexus.sh && sleep 1d"
     networks:
       deployement:
           ipv4_address: 10.1.0.11
 
+  dnsmasq:
+    image: "4km3/dnsmasq:2.85-r2"
+    container_name: dnsmasq
+    volumes:
+      - dnsmasq:/etc
+    networks:
+      deployement:
+          ipv4_address: 10.1.0.254
+
 volumes:
   nexus-data:
+  mirror-data:
+  dnsmasq:
 
 networks:
   deployement:
