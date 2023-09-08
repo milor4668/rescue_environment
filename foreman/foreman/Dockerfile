@@ -22,7 +22,7 @@ RUN dnf -y install \
 WORKDIR /usr/src/app
 
 ENV RAILS_ENV=production
-ENV FOREMAN_APIPIE_LANGS=en
+ENV FOREMAN_APIPIE_LANGS=fr
 ENV REPO_URL=https://github.com/theforeman/foreman.git
 
 #TODO: support local path instead of checkout
@@ -33,4 +33,4 @@ ADD database.yml config/database.yml
 ADD Gemfile.local.rb bundler.d/Gemfile.local.rb
 ADD settings.yaml config/settings.yaml
 
-RUN bundle --without mysql:test:mysql2:development:sqlite:jenkins:openid:libvirt
+RUN bundle config set --local without mysql:test:mysql2:development:sqlite:jenkins:openid:libvirt
