@@ -38,6 +38,7 @@ volumes:
   nexus-data:
   mirror-data:
   dnsmasq:
+  foreman-data:
 
 networks:
   deployement:

@@ -1,0 +1,11 @@
+---
+- hosts: all
+gather_facts: no
+pre_tasks:
+become: yes
+- import_playbook: dnsmasq.yml
+tags: [dnsmasq]
+- import_playbook: revproxy.yml
+tags: [revproxy]
+
+...
