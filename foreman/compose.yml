@@ -11,9 +11,6 @@ services:
       - db
       - memcache
       - proxy
-    networks:
-      deployement:
-          ipv4_address: 10.2.0.20
 
 
   foreman-init:
@@ -49,7 +46,7 @@ services:
       - 1936:1936
 
   db:
-    image: postgres:9.5
+    image: postgres:15.4
     environment:
       - PGDATA=/var/lib/postgresql/data/pgdata
     volumes:
@@ -57,10 +54,4 @@ services:
 
   memcache:
     image: memcached
-    
-networks:
-  deployement:
-    driver: bridge
-    ipam:
-      config:
-        - subnet: 10.2.0.0/16
+

@@ -1,0 +1,56 @@
+
+
+include::../.caradoc.env.adoc[]
+
+= ⚡ | 2023/09/21 - 10:39:07
+
+include::../.caradoc.css.adoc[]
+
+[cols="15a,35a,15a,15a"]
+|====
+|
+[.text-center]
+📒 Plays : *1* / 🖥️ Hosts: *0* (link:./charts{relfilesuffix}[view charts])
+
+|
+[.text-center]
+🟢 ok: *0* (inc. 🟡changed: 0, 🟣ignored: 0)
+
+|
+[.text-center]
+♻️rescued:0
+
+|
+[.text-center]
+🔴 failed: *0*
+
+|
+|====
+
+[.no-border]
+[cols="35a,65a"]
+|====
+|
+[.text-center]
+*Plays (reversed by start time)*
+[%header,cols="100a,5,5"]
+!=====
+! Play ! 🟢 ! 🔴
+! link:+++plays/Installation_BareOS/README+++{relfilesuffix}[+++Installation BareOS+++]
+! 0
+! 0
+!=====
+
+|
+[.text-center]
+*Last 20 tasks*
+[%header,cols="50,70,5,5,5,5,5,5"]
+[.tasks_longest]
+[.emoji_table]
+!=====
+! Play
+! Task ! 🟢 ! 🔴 ! 🟡 ! 🟣  ! 🔵 ! ♻️
+!=====
+
+|
+|====

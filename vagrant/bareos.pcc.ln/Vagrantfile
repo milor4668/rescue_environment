@@ -1,0 +1,17 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+ENV['VAGRANT_DEFAULT_PROVIDER'] = 'virtualbox'
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "debian"
+  config.vm.hostname = "bareos.pcc.ln"
+  config.vm.box_check_update = false
+  config.vm.provider "virtualbox" do |vm|
+    vm.name = "bareos.pcc.ln"
+    vm.memory = "2048"
+    vm.cpus = 2
+    # Display the VirtualBox GUI when booting the machine
+    vm.gui = false
+  end
+end
+

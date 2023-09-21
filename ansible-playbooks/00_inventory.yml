@@ -1,0 +1,10 @@
+---
+all:
+  children:
+    dnsmasq:
+      hosts:
+        dnsmasq.pcc.ln:
+    bareos:
+      hosts:
+        bareos.pcc.ln:
+...

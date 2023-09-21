@@ -1,4 +1,4 @@
-FROM fedora:latest
+FROM fedora:39
 
 LABEL MAINTAINER="shlomi@ben-hanna.com"
 
@@ -22,6 +22,6 @@ ENV REPO_URL=https://github.com/theforeman/smart-proxy.git
 
 RUN git clone --depth=1 ${REPO_URL} . \
  && mkdir logs
-RUN bundle --without bmc:krb5:libvirt:puppet_proxy_legacy:test:windows 
+RUN bundle config set --local without bmc:krb5:libvirt:puppet_proxy_legacy:test:windows 
 
 ADD settings.yml config/settings.yml

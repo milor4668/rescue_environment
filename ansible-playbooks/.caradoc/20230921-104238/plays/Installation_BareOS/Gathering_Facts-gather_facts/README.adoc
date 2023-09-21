@@ -1,0 +1,17 @@
+
+
+include::../../../../.caradoc.env.adoc[]
+
+= TASK: Gathering Facts (link:{source-file-scheme}+++/home/steph/dev/rescue_environment.git/ansible-playbooks/bareos.yml:2+++[view source])
+
+:toc:
+include::../../../../.caradoc.css.adoc[]
+
+== Links
+
+* Playbook: link:../README{relfilesuffix}[+++Installation_BareOS+++](link:../all{relfilesuffix}[all tasks])
+* Run: link:../../../README{relfilesuffix}[run]
+
+== Results
+
++++ ... waiting ... +++

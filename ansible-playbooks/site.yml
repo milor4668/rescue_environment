@@ -1,11 +1,13 @@
 ---
 - hosts: all
-gather_facts: no
-pre_tasks:
-become: yes
-- import_playbook: dnsmasq.yml
-tags: [dnsmasq]
-- import_playbook: revproxy.yml
-tags: [revproxy]
+  gather_facts: no
+  become: yes
+  pre_tasks:
+  - import_playbook: dnsmasq.yml
+    tags: [dnsmasq]
+  - import_playbook: revproxy.yml
+    tags: [revproxy]
+  - import_playbook: bareos.yml
+    tags: [bareos]
 
 ...

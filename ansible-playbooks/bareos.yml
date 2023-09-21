@@ -1,0 +1,9 @@
+---
+- name: Installation BareOS 
+  hosts: bareos
+  tasks:
+    - name: Création d'une instance BareOS 
+      docker_compose:
+        project_src: bareos
+        state: absent
+
